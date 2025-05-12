@@ -1,0 +1,250 @@
+{
+  "一般廣告": {
+    "Facebook 一般廣告": {
+      "source": "facebook",
+      "medium": "cpc",
+      "campaign": "{{campaign.name}}",
+      "content": "{{ad.name}}",
+      "term": "",
+      "備註": "廣告活動應在廣告名稱中以變數抓取"
+    },
+    "LAP 一般廣告": {
+      "source": "line",
+      "medium": "cpc",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "Yahoo聯播網－原生廣告、搜尋廣告": {
+      "source": "yahoo",
+      "medium": "cpc",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "Dcard廣告": {
+      "source": "dcard",
+      "medium": "cpc",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "以事件開頭Facebook下廣告": {
+      "source": "facebook",
+      "medium": "cpc_facebook",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    }
+  },
+  "成效型廣告": {
+    "Facebook成效型廣告": {
+      "source": "facebook",
+      "medium": "cpa",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "LAP成效型廣告": {
+      "source": "line",
+      "medium": "cpa",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "LAP成效型廣告點數": {
+      "source": "line",
+      "medium": "cpa_points",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "Facebook粉絲專頁相闗連結": {
+      "source": "facebook",
+      "medium": "fanpage",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基臉書專頁"
+    },
+    "Facebook粉絲專頁PO文": {
+      "source": "facebook",
+      "medium": "post",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基臉書專頁"
+    },
+    "IG官方帳號粉絲連結": {
+      "source": "instagram",
+      "medium": "fanpage",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基IG官方帳號"
+    },
+    "Dcard品牌專區連結": {
+      "source": "dcard",
+      "medium": "fanpage",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基Dcard專區"
+    },
+    "Dcard品牌專區PO文": {
+      "source": "dcard",
+      "medium": "post",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基Dcard專區"
+    },
+    "LINE官方帳號選單連結": {
+      "source": "line",
+      "medium": "menu",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基LINE官方帳號"
+    },
+    "LINE官方帳號記事本PO文": {
+      "source": "line",
+      "medium": "post",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基LINE官方帳號"
+    },
+    "LINE官方帳號訊息": {
+      "source": "line",
+      "medium": "push",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基LINE官方帳號"
+    }
+  },
+  "自有管道": {
+    "凱基證券YouTube頻道 置頂欄": {
+      "source": "youtube_kgisia",
+      "medium": "info",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "官方YouTube頻道 選單": {
+      "source": "youtube_lohas",
+      "medium": "menu",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "凱基EDM": {
+      "source": "kgi",
+      "medium": "edm",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "凱基簡訊": {
+      "source": "kgi",
+      "medium": "sms",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "凱基QR code看訊_桌牌": {
+      "source": "kgi",
+      "medium": "qrcode",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "凱基新聞稿(官網使用)": {
+      "source": "kgi",
+      "medium": "press",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "凱基linkedin": {
+      "source": "kgi",
+      "medium": "linkedin",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "限凱基YouTube官方頻道"
+    },
+    "凱基體驗活動": {
+      "source": "kgi",
+      "medium": "offline-activity",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "凱基APP版位-首頁板位": {
+      "source": "kgi",
+      "medium": "app_overlay",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    }
+  },
+  "置入／業配合作": {
+    "KOL業配－新聞稿_資訊類媒體": {
+      "source": "cnyes",
+      "medium": "adv_press",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KOL業配－官版位": {
+      "source": "cnyes",
+      "medium": "adv_banner",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KOL業配影片_資訊媒體": {
+      "source": "cnyes",
+      "medium": "adv_video",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "Zuvio": {
+      "source": "zuvio",
+      "medium": "adv_link",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KGI LIFE": {
+      "source": "kgilife",
+      "medium": "adv_link",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": "目前放職福會"
+    }
+  }
+}

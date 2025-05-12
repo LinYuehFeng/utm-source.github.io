@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>UTM參數產生器</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
+    input[type="text"], select, textarea {
+      width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box;
+    }
+    .readonly { background-color: #f0f0f0; }
+    .note { color: blue; font-size: 0.9em; margin-top: -6px; margin-bottom: 10px; }
+    .gray { background-color: #e0e0e0; }
+    button { padding: 10px 20px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>UTM參數產生器</h2>
+  <label>輸入網址：</label>
+  <input type="text" id="baseUrl" placeholder="https://example.com">
+
+  <label>分類選擇：</label>
+  <select id="categorySelect"></select>
+
+  <label>項目選擇：</label>
+  <select id="itemSelect"></select>
+
+  <label>source：</label>
+  <input type="text" id="source" class="readonly" readonly>
+
+  <label>medium：</label>
+  <input type="text" id="medium" class="readonly" readonly>
+
+  <label>campaign：</label>
+  <input type="text" id="campaign">
+
+  <label>content：</label>
+  <input type="text" id="content">
+
+  <label>term：</label>
+  <input type="text" id="term">
+
+  <div class="note" id="note"></div>
+
+  <label>最終產生結果：</label>
+  <textarea id="result" rows="4" readonly></textarea>
+  <br>
+  <button onclick="copyResult()">複製</button>
+
+  <script>
+    let jsonData = {};
+  
+    // 初始化載入 JSON
+    fetch('utm-options.json')
+      .then(response => response.json())
+      .then(data => {
+        jsonData = data;
+        initCategorySelect();
+      })
+      .catch(error => {
+        alert('載入 JSON 失敗！請確認 utm-options.json 檔案存在');
+        console.error(error);
+      });
+  
+    const categorySelect = document.getElementById('categorySelect');
+    const itemSelect = document.getElementById('itemSelect');
+    const sourceInput = document.getElementById('source');
+    const mediumInput = document.getElementById('medium');
+    const campaignInput = document.getElementById('campaign');
+    const contentInput = document.getElementById('content');
+    const termInput = document.getElementById('term');
+    const resultArea = document.getElementById('result');
+    const noteDiv = document.getElementById('note');
+    const baseUrlInput = document.getElementById('baseUrl');
+  
+    function initCategorySelect() {
+      categorySelect.innerHTML = '';
+      for (const category in jsonData) {
+        const opt = document.createElement('option');
+        opt.value = category;
+        opt.textContent = category;
+        categorySelect.appendChild(opt);
+      }
+      categorySelect.dispatchEvent(new Event('change'));
+    }
+  
+    categorySelect.addEventListener('change', () => {
+      const selectedCategory = categorySelect.value;
+      itemSelect.innerHTML = '';
+      for (const item in jsonData[selectedCategory]) {
+        const opt = document.createElement('option');
+        opt.value = item;
+        opt.textContent = item;
+        itemSelect.appendChild(opt);
+      }
+      updateInputs();
+    });
+  
+    itemSelect.addEventListener('change', updateInputs);
+    [campaignInput, contentInput, termInput, baseUrlInput].forEach(i => i.addEventListener('input', updateResult));
+  
+    function updateInputs() {
+      const cat = categorySelect.value;
+      const item = itemSelect.value;
+      const config = jsonData[cat][item];
+      sourceInput.value = config.source || '';
+      mediumInput.value = config.medium || '';
+      campaignInput.value = config.campaign || '';
+      contentInput.value = config.content || '';
+      termInput.value = config.term || '';
+      noteDiv.textContent = config['備註'] || '';
+  
+      const isFacebookDefault = (cat === '一般廣告' && item === 'Facebook 一般廣告');
+      [campaignInput, contentInput].forEach(input => {
+        input.readOnly = isFacebookDefault;
+        input.className = isFacebookDefault ? 'gray' : '';
+      });
+  
+      updateResult();
+    }
+  
+    function updateResult() {
+      const base = baseUrlInput.value.trim();
+      if (!base) {
+        resultArea.value = '';
+        return;
+      }
+  
+      const params = [
+        `utm_source=${sourceInput.value}`,
+        `utm_medium=${mediumInput.value}`,
+        campaignInput.value ? `utm_campaign=${campaignInput.value}` : '',
+        contentInput.value ? `utm_content=${contentInput.value}` : '',
+        termInput.value ? `utm_term=${termInput.value}` : ''
+      ].filter(Boolean).join('&');
+  
+      const separator = base.includes('?') ? '&' : '?';
+      resultArea.value = base + separator + params;
+    }
+  
+    function copyResult() {
+      resultArea.select();
+      document.execCommand('copy');
+      alert('已複製結果到剪貼簿！');
+    }
+  </script>
+  
+
+</body>
+</html>
