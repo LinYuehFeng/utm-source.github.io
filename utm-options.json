@@ -32,8 +32,8 @@
       "term": "",
       "備註": ""
     },
-    "以事件開頭Facebook下廣告": {
-      "source": "facebook",
+    "以鉅亨網Facebook下廣告": {
+      "source": "cnyes",
       "medium": "cpc_facebook",
       "campaign": "",
       "content": "",
@@ -58,14 +58,16 @@
       "term": "",
       "備註": ""
     },
-    "LAP成效型廣告點數": {
+    "LAP任務型廣告": {
       "source": "line",
       "medium": "cpa_points",
       "campaign": "",
       "content": "",
       "term": "",
       "備註": ""
-    },
+    }
+  },
+  "自有管道": {
     "Facebook粉絲專頁相闗連結": {
       "source": "facebook",
       "medium": "fanpage",
@@ -122,7 +124,7 @@
       "term": "",
       "備註": "限凱基LINE官方帳號"
     },
-    "LINE官方帳號訊息": {
+    "LINE官方帳號資訊圖": {
       "source": "line",
       "medium": "push",
       "campaign": "",
@@ -130,19 +132,25 @@
       "term": "",
       "備註": "限凱基LINE官方帳號"
     }
-  },
-  "自有管道": {
-    "凱基證券YouTube頻道 置頂欄": {
-      "source": "youtube_kgisia",
+    "樂活投資人YouTube頻道_資訊欄": {
+      "source": "youtube_lohas",
       "medium": "info",
       "campaign": "",
       "content": "",
       "term": "",
       "備註": ""
     },
-    "官方YouTube頻道 選單": {
+    "樂活投資人YouTube頻道_選單": {
       "source": "youtube_lohas",
       "medium": "menu",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "樂凱基股股漲YouTube頻道_資訊欄": {
+      "source": "youtube_kgisia",
+      "medium": "info",
       "campaign": "",
       "content": "",
       "term": "",
@@ -164,7 +172,7 @@
       "term": "",
       "備註": ""
     },
-    "凱基QR code看訊_桌牌": {
+    "凱基分公司_桌牌": {
       "source": "kgi",
       "medium": "qrcode",
       "campaign": "",
@@ -172,7 +180,7 @@
       "term": "",
       "備註": ""
     },
-    "凱基新聞稿(官網使用)": {
+    "凱基外部新聞稿(廣撒用)": {
       "source": "kgi",
       "medium": "press",
       "campaign": "",
@@ -180,13 +188,13 @@
       "term": "",
       "備註": ""
     },
-    "凱基linkedin": {
+    "凱基領英": {
       "source": "kgi",
       "medium": "linkedin",
       "campaign": "",
       "content": "",
       "term": "",
-      "備註": "限凱基YouTube官方頻道"
+      "備註": ""
     },
     "凱基體驗活動": {
       "source": "kgi",
@@ -196,7 +204,7 @@
       "term": "",
       "備註": ""
     },
-    "凱基APP版位-首頁板位": {
+    "凱基APP版位-蓋板": {
       "source": "kgi",
       "medium": "app_overlay",
       "campaign": "",
@@ -206,7 +214,7 @@
     }
   },
   "置入／業配合作": {
-    "KOL業配－新聞稿_資訊類媒體": {
+    "鉅亨網業配稿": {
       "source": "cnyes",
       "medium": "adv_press",
       "campaign": "",
@@ -214,7 +222,7 @@
       "term": "",
       "備註": ""
     },
-    "KOL業配－官版位": {
+    "鉅亨網合作版位": {
       "source": "cnyes",
       "medium": "adv_banner",
       "campaign": "",
@@ -222,9 +230,89 @@
       "term": "",
       "備註": ""
     },
-    "KOL業配影片_資訊媒體": {
+    "鉅亨網業配影片_資訊欄": {
       "source": "cnyes",
       "medium": "adv_video",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KOL業配影片_資訊欄": {
+      "source": "kol",
+      "medium": "adv_video",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KOL業配FB_PO文連結": {
+      "source": "kol",
+      "medium": "adv_facebook",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KOL業配IG_PO文連結": {
+      "source": "kol",
+      "medium": "adv_instagram",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KOL業配Dcard_PO文連結": {
+      "source": "kol",
+      "medium": "adv_dcard",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "通服_台鐵員工": {
+      "source": "affiliates_railway",
+      "medium": "adv_link",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "通服_郵局": {
+      "source": "affiliates_post",
+      "medium": "adv_link",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "袋鼠金融": {
+      "source": "roocash",
+      "medium": "adv_link1",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "Money101": {
+      "source": "money101",
+      "medium": "adv_link1",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "股感": {
+      "source": "stockfeel",
+      "medium": "adv_link",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "Dcard": {
+      "source": "dcard",
+      "medium": "adv_link",
       "campaign": "",
       "content": "",
       "term": "",
@@ -238,9 +326,25 @@
       "term": "",
       "備註": ""
     },
-    "KGI LIFE": {
-      "source": "kgilife",
+    "LINE_Bank": {
+      "source": "linebank",
       "medium": "adv_link",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KGI_Bank": {
+      "source": "kgibank",
+      "medium": "adv_link",
+      "campaign": "",
+      "content": "",
+      "term": "",
+      "備註": ""
+    },
+    "KGI_LIFE": {
+      "source": "kgilife",
+      "medium": "adv_link1",
       "campaign": "",
       "content": "",
       "term": "",
